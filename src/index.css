@@ -2,11 +2,15 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'VT323', monospace;
+  background: #001B2F;
+  width: 100vw;
+  height: 100vh;
 }
 
 .styles_modal__gNwvD {
   max-width: 500px;
   position: relative;
+  margin-top: 7vh;
   padding: 0;
   background: #000;
   background-clip: padding-box;
@@ -15,4 +19,8 @@ body {
 
 .styles_closeButton__20ID4 {
   display: none;
+}
+
+.styles_overlay__CLSq- {
+  background: rgba(0, 27, 47, 0.75);
 }

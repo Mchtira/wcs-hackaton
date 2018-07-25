@@ -3,6 +3,7 @@ import Modal from 'react-responsive-modal'
 import Fight from '../containers/Fight.js'
 import Char from '../ressources/rpg-pack/chars/gabe/player.png'
 import MapLevel1 from '../ressources/map.png'
+import './style/level1.css'
 
 class Forest extends Component {
   state = {
@@ -162,12 +163,19 @@ onCloseModal = () => {
 render() {
     return (
       <div>
-      <center><canvas ref='canvas' width="650" height="650" style={{border:'1px solid #000000'}}></canvas></center>
+      <div className='header-page'>
+        <h1 className='header-name'>Final Pokemon Fantasy</h1>
+      </div>
+      <div className='canvas-level1'>
+        <div>
+          <canvas ref='canvas' width="650" height="650" style={{border:'1px solid #000000'}}></canvas>
+        </div>
+      </div>
       <div style={{display : 'none'}}>
       <img ref='char'src={Char} />
       <img ref='maplevel1' src={MapLevel1} />
       </div>
-      <Modal open={true} onClose={this.onCloseModal} center>
+      <Modal open={this.state.openModal} onClose={this.onCloseModal} center>
       <Fight />
       </Modal>  
       </div>
