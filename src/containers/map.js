@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Modal from 'react-responsive-modal'
-import Fight from '../containers/Fight.js'
+import Fight from '../containers/fight.js'
 import Char from '../ressources/rpg-pack/chars/gabe/player.png'
 import MapLevel1 from '../ressources/map.png'
 import './style/level1.css'
@@ -11,9 +11,7 @@ class Forest extends Component {
   }
 
   componentDidMount () {
-  //canvas gestionà
-  console.log(this)
-
+  //canvas gestion
   const canvas = this.refs.canvas
   const ctx = canvas.getContext('2d')
   const char = this.refs.char
@@ -58,7 +56,7 @@ class Forest extends Component {
         if (y > 140 && y < 160) y -= move
           else y += move
         }
-      // big blog
+      // big block
       if ((x > 50 && x < 275) && (y < 320 && y > 140)) {
         obs = true
         if (y < 300 && y > 160 && x < 275) x += move
@@ -172,11 +170,11 @@ render() {
         </div>
       </div>
       <div style={{display : 'none'}}>
-      <img ref='char'src={Char} />
-      <img ref='maplevel1' src={MapLevel1} />
+      <img ref='char' alt='shut up pls' src={Char} />
+      <img ref='maplevel1' alt='shut up pls' src={MapLevel1} />
       </div>
       <Modal open={this.state.openModal} onClose={this.onCloseModal} center>
-      <Fight />
+      <Fight {... this.props} fn={this.onCloseModal} />
       </Modal>  
       </div>
       )
