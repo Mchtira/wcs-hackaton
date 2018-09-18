@@ -6,7 +6,6 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      test: 0,
       myTurn: true,
       action: 0,
       hp: 280,

@@ -170,8 +170,8 @@ render() {
         </div>
       </div>
       <div style={{display : 'none'}}>
-      <img ref='char' alt='shut up pls' src={Char} />
-      <img ref='maplevel1' alt='shut up pls' src={MapLevel1} />
+      <img ref='char' alt='' src={Char} />
+      <img ref='maplevel1' alt='' src={MapLevel1} />
       </div>
       <Modal open={this.state.openModal} onClose={this.onCloseModal} center>
       <Fight {... this.props} fn={this.onCloseModal} />
