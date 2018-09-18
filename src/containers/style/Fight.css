@@ -1,6 +1,6 @@
 .fight-h1 {
   text-align: center;
-  font-family: 'VT323', moonospace;
+  font-family: 'VT323', monospace;
   font-size: 28px;
   text-transform: uppercase;
   margin: 0; 
@@ -9,7 +9,7 @@
 
 .fight-h2 {
   text-align: center;
-  font-family: 'VT323', moonospace;
+  font-family: 'VT323', monospace;
   font-size: 24px;
   text-transform: uppercase;
   margin: 0; 
@@ -53,7 +53,7 @@
 }
 
 .fight-button {
-  font-family: 'VT323', moonospace;
+  font-family: 'VT323', monospace;
   font-size: 16px;
   text-transform: uppercase;
   width:150px;
@@ -63,4 +63,83 @@
   color: white;
   margin: 4px;
   cursor: crosshair;
+}
+
+.active {
+  border: 3px solid yellow;
+}
+
+.fight-char {
+  width: 50px;
+  height:50px;
+  overflow: hidden;
+  position: relative;
+  left: 65px;
+}
+
+.fight-char-attack {
+  width: 50px;
+  height:50px;
+  overflow: hidden;
+  position: relative;
+  left: 75px;
+}
+
+.fight-char-img {
+  height: 50px;
+  width:auto;
+}
+
+.fight-ennemy {
+  width: 200px;
+  height:150px;
+  overflow: hidden;
+  position: relative;
+  left: 255px;
+  margin-top: -55px;
+}
+
+.fight-ennemy-img {
+  height: 110px;
+  width:auto;
+}
+
+.fight-ennemy-attack {
+  width: 200px;
+  height:150px;
+  overflow: hidden;
+  position: relative;
+  left: 245px;
+  margin-top: -55px;
+}
+
+.fight-content-player {
+  display: flex;
+  justify-content: center;
+}
+
+.fight-lifemana-img {
+  width: 25px;
+  height: 25px;
+}
+
+.fight-result {
+  position: relative;
+  color: white;
+  text-align: center;
+  z-index: 1000;
+  font-size: 80px;
+}
+
+.result {
+  position: relative;
+  z-index: 1000;
+}
+
+
+.persos {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  margin-top: -10px;
 }

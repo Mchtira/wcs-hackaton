@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import Modal from 'react-responsive-modal'
-import Fight from '../containers/Fight.js'
+import Fight from '../containers/fight.js'
 import Char from '../ressources/rpg-pack/chars/gabe/player.png'
 import MapLevel1 from '../ressources/map.png'
+import './style/level1.css'
 
 class Forest extends Component {
   state = {
@@ -10,9 +11,7 @@ class Forest extends Component {
   }
 
   componentDidMount () {
-  //canvas gestionà
-  console.log(this)
-
+  //canvas gestion
   const canvas = this.refs.canvas
   const ctx = canvas.getContext('2d')
   const char = this.refs.char
@@ -57,7 +56,7 @@ class Forest extends Component {
         if (y > 140 && y < 160) y -= move
           else y += move
         }
-      // big blog
+      // big block
       if ((x > 50 && x < 275) && (y < 320 && y > 140)) {
         obs = true
         if (y < 300 && y > 160 && x < 275) x += move
@@ -162,13 +161,20 @@ onCloseModal = () => {
 render() {
     return (
       <div>
-      <center><canvas ref='canvas' width="650" height="650" style={{border:'1px solid #000000'}}></canvas></center>
-      <div style={{display : 'none'}}>
-      <img ref='char'src={Char} />
-      <img ref='maplevel1' src={MapLevel1} />
+      <div className='header-page'>
+        <h1 className='header-name'>Final Pokemon Fantasy</h1>
       </div>
-      <Modal open={true} onClose={this.onCloseModal} center>
-      <Fight />
+      <div className='canvas-level1'>
+        <div>
+          <canvas ref='canvas' width="650" height="650" style={{border:'1px solid #000000'}}></canvas>
+        </div>
+      </div>
+      <div style={{display : 'none'}}>
+      <img ref='char' alt='' src={Char} />
+      <img ref='maplevel1' alt='' src={MapLevel1} />
+      </div>
+      <Modal open={this.state.openModal} onClose={this.onCloseModal} center>
+      <Fight {... this.props} fn={this.onCloseModal} />
       </Modal>  
       </div>
       )
